@@ -1,4 +1,3 @@
-<app-menu></app-menu>
-<hr>
-<app-users></app-users>
-
+<div *ngFor="let user of users"  >
+  <app-user [user]="user" ></app-user>
+</div>
