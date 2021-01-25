@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Route, Router} from '@angular/router';
+import {User} from '../../models/User';
 
 @Component({
   selector: 'app-full-user',
@@ -8,8 +9,16 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class FullUserComponent implements OnInit {
 
-  constructor(private activatedRoute: ActivatedRoute) {
-    this.activatedRoute.params.subscribe(value => console.log(value));
+  user: User;
+
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+    this.activatedRoute.params.subscribe(value => {
+      console.log('asdasd');
+      this.user = this.router.getCurrentNavigation().extras.state as User;
+
+    });
+
+
   }
 
   ngOnInit(): void {
