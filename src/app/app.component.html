@@ -1,0 +1,17 @@
+<!--<form #form="ngForm" (ngSubmit)="submit(form)">-->
+<!--  <input id="name" [class.error]="!form.controls.name?.valid" [(ngModel)]="user.name" name="name" minlength="10">-->
+<!--  <div [class]="['error','asd','target']" *ngIf="!form.controls.name?.valid">-->
+<!--    name must be 10 symbols at least-->
+<!--  </div>-->
+<!--  <input [(ngModel)]="user.age" name="age">-->
+<!--  <button> send</button>-->
+<!--</form>-->
+
+
+<form [formGroup]="myForm" (ngSubmit)="xxx(myForm)">
+  <input [formControl]="name">
+  <input [formControl]="age">
+  <button [disabled]="!myForm.valid">save</button>
+
+</form>
+
