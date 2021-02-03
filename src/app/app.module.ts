@@ -1,17 +1,16 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { MenuComponent } from './menu/menu.component';
-import { UsersComponent } from './users/users.component';
-import { UserComponent } from './user/user.component';
+import {AppComponent} from './app.component';
+import { CustomPipe } from './pipes/custom.pipe';
+import { RedDirective } from './directives/red.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
-    UsersComponent,
-    UserComponent
+    CustomPipe,
+    RedDirective,
+
   ],
   imports: [
     BrowserModule
